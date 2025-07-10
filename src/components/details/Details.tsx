@@ -20,7 +20,7 @@ export const Details = () => {
   }, []);
 
   useEffect(() => {
-    const city = mockCityDetailsList.find((item) => item.city.id === cityId);
+    const city = mockCityDetailsList.find((item) => item.city.id.toLowerCase() === cityId);
     setInfo(city as CityWeatherDetails);
   }, [cityId]);
 
@@ -28,8 +28,7 @@ export const Details = () => {
     <section className="details">
       <div
         className={`details-background details-background__${getWeatherType(
-          // change
-          info?.currentWeather.weathercode
+          info?.currentWeather.weathercode as number
         )}`}
         aria-label="background image"
       />
@@ -40,7 +39,6 @@ export const Details = () => {
         </Link>
 
         <h2 className="details-temp">
-          {/* change */}
           {info?.currentWeather.temperature}°C
         </h2>
 
@@ -65,7 +63,6 @@ export const Details = () => {
         <div className="details-dailies">
           {["Tue", "Wed", "Thu"].map((day, i) => (
             <div className="details-daily" key={day}>
-              {/* change */}
               <p className="details-daily-day">{day}</p>
 
               <div className="details-daily-group">

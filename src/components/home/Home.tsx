@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { Card } from "../card";
 import { useEffect } from "react";
 import { actions } from "../../store/reducers/favorites";
+import { mockCityDetailsList } from "../../extras/data";
 
 
 export const Home = () => {
@@ -17,6 +18,18 @@ export const Home = () => {
 
   const saved = localStorage.getItem("favorites");
 
+  const getFavoritesDetailed = () => {
+    const detailed = [];
+
+    for (const city of mockCityDetailsList) {
+      if (favorites.includes(city.city.id)) {
+        detailed.push(city);
+      }
+    }
+
+    return detailed;
+  };
+
   useEffect(() => {
     if (saved) {
       setFavorites(JSON.parse(saved));
@@ -24,8 +37,7 @@ export const Home = () => {
       setFavorites([]);
     }
   }, []);
-
-
+  
   //  cleanup after the Details page
   useEffect(() => {
     const returnOverflow = () => {
@@ -56,8 +68,8 @@ export const Home = () => {
             className="cities"
             style={{ justifyContent: "space-between" }}
           >
-            {favorites.map((fav) => (
-              <Card key={fav} cityName={fav} />
+            {getFavoritesDetailed().map((fav) => (
+              <Card key={fav.city.id} info={fav} />
             ))}
           </section>
         ) : (

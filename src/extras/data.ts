@@ -21,14 +21,14 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
     },
     daily: {
       time: ["2025-07-08", "2025-07-09", "2025-07-10"],
-      avgTemp: [29.4, -15, 19],
-      weathercode: [3, 73, 5],
+      avgTemp: [29.4, 25, 19],
+      weathercode: [3, 3, 5],
     },
   },
   {
     city: { id: "London", country: "UK", latitude: 51.51, longitude: -0.13 },
     currentWeather: {
-      time: "2025-07-08T15:00",
+      time: "2025-07-08T13:00",
       temperature: 22.1,
       weathercode: 3,
     },
@@ -56,7 +56,7 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
       longitude: -74.01,
     },
     currentWeather: {
-      time: "2025-07-08T15:00",
+      time: "2025-07-08T08:00",
       temperature: 28.3,
       weathercode: 1,
     },
@@ -79,7 +79,7 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
   {
     city: { id: "Tokyo", country: "Japan", latitude: 35.68, longitude: 139.69 },
     currentWeather: {
-      time: "2025-07-08T15:00",
+      time: "2025-07-08T22:00",
       temperature: 31.4,
       weathercode: 2,
     },
@@ -102,7 +102,7 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
   {
     city: { id: "Paris", country: "France", latitude: 48.85, longitude: 2.35 },
     currentWeather: {
-      time: "2025-07-08T15:00",
+      time: "2025-07-08T14:00",
       temperature: 24.8,
       weathercode: 3,
     },
@@ -123,10 +123,24 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
     },
   },
   {
-    city: { id: "Berlin", country: "Germany", latitude: 52.52, longitude: 13.40 },
-    currentWeather: { time: "2025-07-08T15:00", temperature: 26.5, weathercode: 2 },
+    city: {
+      id: "Berlin",
+      country: "Germany",
+      latitude: 52.52,
+      longitude: 13.4,
+    },
+    currentWeather: {
+      time: "2025-07-08T14:00",
+      temperature: 26.5,
+      weathercode: 2,
+    },
     hourly: {
-      time: ["2025-07-08T06:00", "2025-07-08T12:00", "2025-07-08T18:00", "2025-07-08T00:00"],
+      time: [
+        "2025-07-08T06:00",
+        "2025-07-08T12:00",
+        "2025-07-08T18:00",
+        "2025-07-08T00:00",
+      ],
       avgTemp: [17, 22.5, 26.5, 20],
       weathercode: [2, 2, 3],
     },
@@ -137,10 +151,24 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
     },
   },
   {
-    city: { id: "Sydney", country: "Australia", latitude: -33.87, longitude: 151.21 },
-    currentWeather: { time: "2025-07-08T15:00", temperature: 17.2, weathercode: 1 },
+    city: {
+      id: "Sydney",
+      country: "Australia",
+      latitude: -33.87,
+      longitude: 151.21,
+    },
+    currentWeather: {
+      time: "2025-07-08T21:00",
+      temperature: 17.2,
+      weathercode: 1,
+    },
     hourly: {
-      time: ["2025-07-08T06:00", "2025-07-08T12:00", "2025-07-08T18:00", "2025-07-08T00:00"],
+      time: [
+        "2025-07-08T06:00",
+        "2025-07-08T12:00",
+        "2025-07-08T18:00",
+        "2025-07-08T00:00",
+      ],
       avgTemp: [10, 14, 17.2, 13],
       weathercode: [1, 1, 1],
     },
@@ -151,10 +179,24 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
     },
   },
   {
-    city: { id: "Toronto", country: "Canada", latitude: 43.65, longitude: -79.38 },
-    currentWeather: { time: "2025-07-08T15:00", temperature: 25.0, weathercode: 3 },
+    city: {
+      id: "Toronto",
+      country: "Canada",
+      latitude: 43.65,
+      longitude: -79.38,
+    },
+    currentWeather: {
+      time: "2025-07-08T07:00",
+      temperature: 25.0,
+      weathercode: 3,
+    },
     hourly: {
-      time: ["2025-07-08T06:00", "2025-07-08T12:00", "2025-07-08T18:00", "2025-07-08T00:00"],
+      time: [
+        "2025-07-08T06:00",
+        "2025-07-08T12:00",
+        "2025-07-08T18:00",
+        "2025-07-08T00:00",
+      ],
       avgTemp: [16, 21, 25.0, 19],
       weathercode: [2, 3, 2],
     },
@@ -165,10 +207,19 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
     },
   },
   {
-    city: { id: "Rome", country: "Italy", latitude: 41.90, longitude: 12.49 },
-    currentWeather: { time: "2025-07-08T15:00", temperature: 30.2, weathercode: 5 },
+    city: { id: "Rome", country: "Italy", latitude: 41.9, longitude: 12.49 },
+    currentWeather: {
+      time: "2025-07-08T14:00",
+      temperature: 30.2,
+      weathercode: 5,
+    },
     hourly: {
-      time: ["2025-07-08T06:00", "2025-07-08T12:00", "2025-07-08T18:00", "2025-07-08T00:00"],
+      time: [
+        "2025-07-08T06:00",
+        "2025-07-08T12:00",
+        "2025-07-08T18:00",
+        "2025-07-08T00:00",
+      ],
       avgTemp: [20, 27, 30.2, 24],
       weathercode: [3, 5, 4],
     },
@@ -179,10 +230,24 @@ export const mockCityDetailsList: CityWeatherDetails[] = [
     },
   },
   {
-    city: { id: "Buenos Aires", country: "Argentina", latitude: -34.60, longitude: -58.38 },
-    currentWeather: { time: "2025-07-08T15:00", temperature: 14.9, weathercode: 1 },
+    city: {
+      id: "Buenos Aires",
+      country: "Argentina",
+      latitude: -34.6,
+      longitude: -58.38,
+    },
+    currentWeather: {
+      time: "2025-07-08T14:00",
+      temperature: 14.9,
+      weathercode: 1,
+    },
     hourly: {
-      time: ["2025-07-08T06:00", "2025-07-08T12:00", "2025-07-08T18:00", "2025-07-08T00:00"],
+      time: [
+        "2025-07-08T06:00",
+        "2025-07-08T12:00",
+        "2025-07-08T18:00",
+        "2025-07-08T00:00",
+      ],
       avgTemp: [7, 11, 14.9, 10],
       weathercode: [1, 1, 2],
     },

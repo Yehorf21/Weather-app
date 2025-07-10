@@ -1,10 +1,8 @@
 import { Link } from "react-router";
 import { Card } from "../card";
-import { mockCityDetails } from "../../extras/placeholder";
-
+import { mockCityDetailsList } from "../../extras/data";
 
 export const Cities = () => {
-
   return (
     <section className="cities-section">
       <header>
@@ -12,7 +10,7 @@ export const Cities = () => {
       </header>
 
       <main className="cities">
-        {mockCityDetails.map(city => (
+        {mockCityDetailsList.map(city => (
           <Card key={city.city.id} info={city} />
         ))}
       </main>

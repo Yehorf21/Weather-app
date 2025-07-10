@@ -3,6 +3,7 @@ import { City, Weather } from "../../extras/types.ts";
 import axios from 'axios';
 
 
+// set this up but didn't get enough time to utilize
 const BASE_URL = "https://api.open-meteo.com";
 
 export const fetchShortWeather = createAsyncThunk<Weather, City>(
