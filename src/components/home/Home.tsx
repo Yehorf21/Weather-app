@@ -55,7 +55,7 @@ export const Home = () => {
         <h1 className="logo">Weatherly.io</h1>
         <Link to="/cities">
           <img
-            src="/public/go-to-cities.png"
+            src="/go-to-cities.png"
             alt="link to cities"
             className="cities-link-image"
           />
@@ -73,7 +73,7 @@ export const Home = () => {
             ))}
           </section>
         ) : (
-          <img className="home-image" src="/public/not-found-group.png" />
+          <img className="home-image" src="/not-found-group.png" />
         )}
       </main>
     </section>
