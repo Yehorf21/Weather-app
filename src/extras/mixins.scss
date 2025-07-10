@@ -1,0 +1,39 @@
+@mixin textType($fontSize, $lineHeight, $fontFamily, $color) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $fontFamily;
+  
+  color: $color;
+}
+
+@mixin onMobile() {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin onTablet() {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin onDesktop() {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin applyPadding {
+  --padding: 16px;
+
+  padding-inline: var(--padding);
+
+  @include onTablet() {
+    --padding: 32px;
+  }
+
+  @include onDesktop() {
+    --padding: 120px;
+  }
+}

@@ -1,0 +1,19 @@
+// colors
+
+$dark: #191B1D;
+$white: #ffffff;
+$blue: #CFDBEB;
+$greyish: #AB9D9D;
+
+// fonts
+
+$elegant: 'Italiana';
+$free: 'Itim';
+
+:root {
+  --card-button-size: 38px;
+
+  @include onDesktop {
+    --card-button-size: 52px;
+  }
+}

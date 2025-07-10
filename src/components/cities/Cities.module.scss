@@ -1,0 +1,29 @@
+.cities-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include onDesktop {
+    gap: 64px;
+  }
+}
+
+.link-home {
+  @include textType(24px, 32px, $free, $blue);
+
+  text-decoration: none;
+}
+
+.cities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  column-gap: 60px;
+  row-gap: 40px;
+
+  @include onDesktop {
+    column-gap: 120px;
+    row-gap: 60px;
+  }
+}

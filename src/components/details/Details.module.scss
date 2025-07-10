@@ -1,0 +1,246 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include onTablet {
+    gap: 50px;
+  }
+}
+
+.details-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  display: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-size: contain;
+  
+  z-index: -1;
+
+  @include onDesktop {
+    display: block;
+  }
+  
+  &__sun {
+    background-image: url(/public/sun.png);
+  }
+  
+  &__rain {
+    background-image: url(/public/rain.png);
+  }
+
+  &__snow {
+    background-image: url(/public/snow.png);
+  }
+}
+
+.details-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-temp {
+  margin: 0;
+  font-size: 32px;
+  color: $white;
+  
+  @include onDesktop {
+    color: $dark;
+    font-size: 52px;
+  }
+}
+
+.details-update {
+  background-color: transparent;
+  border: none;
+
+  @include textType(24px, 32px, $free, $blue);
+
+  cursor: pointer;
+}
+
+.details-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  
+  width: 80vw;
+}
+
+.details-main-widget {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 20px 60px;
+  background-color: $blue;
+  opacity: .7;
+
+  border-radius: 70px;
+
+  @include onDesktop {
+    padding-inline: 120px;
+  }
+}
+
+.details-daystate {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  align-items: center;
+  width: 100%;
+
+  @include onTablet {
+    width: 50%;
+  }
+
+  @include onDesktop {
+    width: auto;
+  }
+}
+
+.details-daystate-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__morning {
+    width: 106px;
+    height: 124px;
+
+    background-image: url(/public/daystates/morning.svg);
+  }
+
+  &__afternoon {
+    width: 113px;
+    height: 122px;
+
+    background-image: url(/public/daystates/afternoon.svg);
+  }
+
+  &__evening {
+    // had to add margin top for evening and night to better position the images since they have different sizes
+    margin-top: 19px;
+
+    width: 84px;
+    height: 103px;
+
+    background-image: url(/public/daystates/evening.svg);
+  }
+
+  &__night {
+    margin-top: 15px;
+
+    width: 94px;
+    height: 107px;
+
+    background-image: url(/public/daystates/night.svg);
+  }
+}
+
+.details-daystate-temp {
+  font-size: 24px;
+}
+
+
+.details-dailies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  
+  @include onDesktop {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
+.details-daily {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 80%;
+  padding: 12px 28px;
+  
+  background-color: $dark;
+  opacity: .7;
+  
+  @include onDesktop {
+    gap: 100px;
+    width: 27%;
+    justify-content: unset;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: calc(50% - 1px);
+
+    width: 1px;
+    height: 90%;
+
+    background-color: $white;
+  }
+}
+
+.details-daily-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.details-daily-day {
+  font-size: 48px;
+  color: $white;
+}
+
+.details-daily-icon {
+  width: 58px;
+  height: 58px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__sun {
+    background-image: url(/public/daily/sun.svg);
+  }
+
+  &__rain {
+    background-image: url(/public/daily/rain.svg);
+  }
+
+  &__snow {
+    background-image: url(/public/daily/snow.svg);
+  }
+}
+
+.details-daily-temp {
+  font-size: 24px;
+  color: $white;
+}
+
+.details-footer {
+  align-self: center;
+}
+
+.details-city {
+  @include textType(82px, 96px, $elegant, $white);
+
+  font-weight: 100;
+
+  @include onDesktop {
+    color: $dark;
+  }
+}

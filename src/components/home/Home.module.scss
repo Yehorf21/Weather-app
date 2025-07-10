@@ -1,0 +1,53 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  align-items: center;
+}
+
+.home-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  @include onDesktop {
+    gap: 48px;
+  }
+}
+
+.logo {
+  @include textType(48px, 56px, $elegant, $white);
+  font-weight: 100;
+  margin: 0;
+
+  @include onDesktop {
+    font-size: 72px;
+  }
+}
+
+.cities-link-image {
+  width: 200px;
+  height: 48px;
+
+  object-fit: contain;
+
+  @include onDesktop {
+    width: 280px;
+    height: 70px;
+  }
+}
+
+.home-image {
+  height: 400px;
+  width: 60vw;
+
+  object-fit: contain;
+
+  @include onTablet {
+    height: 480px;
+  }
+}
+

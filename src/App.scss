@@ -1,0 +1,39 @@
+@import './extras/mixins';
+@import './extras/variables';
+
+@import './index';
+
+@import './components/card/Card.module';
+@import './components/home/Home.module';
+@import './components/cities/Cities.module';
+@import './components/details/Details.module';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: $free;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+
+  background-color: $dark;
+}
+
+body {
+  @include applyPadding;
+
+  padding-block: 24px 32px;
+
+  @include onTablet {
+    padding-block: 32px 48px;
+  }
+}
+
+p {
+  margin: 0;
+}
